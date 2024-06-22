@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s;
+    z-index: 1000; /* ヘッダーを前面に表示 */
+}
+
+.scrolled {
+    background-color: rgba(248, 249, 250, 0.8);
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 左揃えに変更 */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 20px 0 0; /* 右マージンを追加して左に移動 */
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.service-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px; /* 左にマージンを追加 */
+    margin-right: 30px; /* 右にマージンを追加 */
+}
+
+.service-button:hover {
+    background-color: #218838;
+}
+
+main {
+    padding: 80px 20px 20px 20px;
+}
+
+section {
+    padding: 20px 0;
+    margin-top: 60px; /* 各セクションの上にマージンを追加 */
+}
+
+.notice {
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.poster-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.poster-container img {
+    max-width: 45%; /* 画像が2列に並ぶように設定 */
+}
