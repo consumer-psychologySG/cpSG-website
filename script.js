@@ -1,24 +1,19 @@
 window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 0) {
-        header.style.background = 'rgba(255, 255, 255, 0.9)';
+    var header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
     } else {
-        header.style.background = 'transparent';
+        header.classList.remove('scrolled');
     }
 });
 
-// スムーススクロールとオフセットのためのコード
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        const headerOffset = document.querySelector('header').offsetHeight;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - headerOffset;
-
-        window.scrollBy({
-            top: offsetPosition,
+        window.scrollTo({
+            top: targetElement.offsetTop - header.offsetHeight,
             behavior: 'smooth'
         });
     });
