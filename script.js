@@ -1,19 +1,24 @@
 window.addEventListener('scroll', function() {
-    var header = document.getElementById('header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
+    const header = document.querySelector('header');
+    if (window.scrollY > 0) {
+        header.style.background = 'rgba(255, 255, 255, 0.9)';
     } else {
-        header.classList.remove('scrolled');
+        header.style.background = 'transparent';
     }
 });
 
-document.querySelectorAll('nav a').forEach(anchor => {
+// スムーススクロールとオフセットのためのコード
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        window.scrollTo({
-            top: targetElement.offsetTop - header.offsetHeight,
+        const headerOffset = document.querySelector('header').offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
             behavior: 'smooth'
         });
     });
