@@ -12,52 +12,84 @@
             <a href="#home"><img src="logo.png" alt="研究会ロゴ"></a>
         </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">トップ</a></li>
                 <li><a href="#activities">過去の活動</a></li>
                 <li><a href="#about">研究会について</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
-            <a href="https://forms.gle/CfpyFMiPoAY9ZoxT9" class="service-button">広報代行サービスを依頼</a>
         </nav>
+        <a href="https://forms.gle/CfpyFMiPoAY9ZoxT9" class="service-button">広報代行サービスを依頼</a>
     </header>
+    <div class="fixed-menu">
+        <div class="hamburger-menu">
+            <div class="menu-toggle"></div>
+        </div>
+    </div>
+    <div class="side-menu">
+        <h2>メニュー</h2>
+        <ul>
+            <li><a href="#home">トップ</a></li>
+            <li><a href="#activities">過去の活動</a></li>
+            <li><a href="#about">研究会について</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="https://forms.gle/CfpyFMiPoAY9ZoxT9" class="service-button">広報代行サービスを依頼</a>
+        <div class="close-button">×</div>
+    </div>
     <main>
-        <section id="home">
-            <h1 class="center">消費者心理研究会</h1> 
-            <div class="notice">
-                <h2>お知らせ</h2>
-                <p>最新の更新や告知はこちらに表示されます。</p>
+        <div class="content-wrapper">
+            <div class="main-content">
+                <section id="home">
+                    <h1 class="center">消費者心理研究会</h1> 
+                    <p>私たちはその名の通り、消費者の心理を研究しています。<br>
+                        消費者の範囲はさまざまで、ファンダム分析に学内集団の動向など多岐に渡っています。<br>
+                        ・部員を集めたいけど広報の仕方が分からない<br>
+                        ・ポスターを作りたいけどそもそもポスターってどうやって作るの？<br>
+                        そんな疑問や課題を抱えている団体のみなさん、ぜひ相談してください。</p>
+                </section>
+                <section id="activities">
+                    <h2>過去の活動</h2>
+                    <p>ここに過去に作成したポスターを掲載しています。</p>
+                    <div class="poster-container">
+                        <img src="poster1.png" alt="ポスター1" class="poster" data-large="poster1.png">
+                        <img src="poster2.png" alt="ポスター2" class="poster" data-large="poster2.png">
+                        <!-- さらにポスターを追加 -->
+                    </div>
+                    <div class="poster-dots">
+                        <span class="poster-dot"></span>
+                        <span class="poster-dot"></span>
+                        <span class="poster-dot"></span>
+                    </div>
+                </section>
+                <section id="about">
+                    <h2>研究会について</h2>
+                    <p>代表者・連絡先など</p>
+                    <p>代表者: 中間　さや夏 </p>
+                    <p>連絡先: kuas.conphysg@gmail.com</p>
+                </section>
+                <section id="faq">
+                    <h2>FAQ</h2>
+                    <p>よくある質問</p>
+                    <p>質問1: </p>
+                    <p>質問2: </p>
+                </section>
             </div>
-            <p>私たちはその名の通り、消費者の心理を研究しています。消費者の範囲はさまざまで、ファンダム分析に学内集団の動向など多岐に渡っています。<br>
-            部員を集めたいけど広報の仕方が分からない、ポスターを作りたいけどそもそもポスターってどうやって作るの？そんな疑問や課題を抱えている団体のみなさん、ぜひ相談してください。</p>
-        </section>
-        <section id="activities">
-            <h2>過去の活動</h2>
-            <p>ここに過去に作成したポスターを表示します。</p>
-            <div class="poster-container">
-                <img src="poster1.png" alt="ポスター1">
-                <img src="poster2.jpg" alt="ポスター2">
-                <!-- さらにポスターを追加 -->
+            <div class="sidebar">
+                <div class="notice">
+                    <h2>お知らせ</h2>
+                    <p>宣伝ポスターを作成しました。<br>2024年06月25日</p>
+                </div>
             </div>
-        </section>        
-        <section id="about">
-            <h2>研究会について</h2>
-            <p>ここに代表者、連絡先などの研究会情報を表示します。</p>
-            <p>代表者: 中間　さや夏 </p>
-            <p>連絡先: kuas.conphysg@google.com</p>
-            <!-- その他の情報を追加 -->
-        </section>
-        <section id="faq">
-            <h2>FAQ</h2>
-            <p>よくある質問</p>
-            <p>質問1: </p>
-            <p>質問2: </p>
-            <!-- さらに質問を追加 -->
-        </section>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 消費者心理研究会</p>
     </footer>
+    <div id="modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
